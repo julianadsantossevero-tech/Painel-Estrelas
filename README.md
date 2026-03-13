@@ -1,33 +1,17 @@
-# Painel Estrelas
+# Radar Estrelas
 
-Projeto pronto para publicar na Vercel.
+Site estático pronto para publicar no GitHub Pages.
 
-## Como rodar localmente
+## Arquivos
+- `index.html` → estrutura do painel
+- `style.css` → visual
+- `data.js` → dados do painel
+- `script.js` → comportamento e navegação
 
-```bash
-npm install
-npm run dev
-```
+## Como atualizar
+Abra `data.js` no GitHub e troque os números/listas pelos dados atuais.
 
-## Como publicar na Vercel
-
-1. Suba todos os arquivos desta pasta para o GitHub.
-2. Entre em https://vercel.com
-3. Clique em **Add New Project**.
-4. Importe o repositório.
-5. A Vercel vai detectar Vite automaticamente.
-6. Clique em **Deploy**.
-
-## Estrutura esperada da planilha
-
-A primeira aba do Excel pode usar colunas como:
-
-- Franquia
-- Distribuidor
-- Empreendedora
-- Pontos
-- Sacolas
-- Categoria
-- Status
-
-O painel tenta reconhecer variações parecidas desses nomes.
+## Como publicar
+1. Suba estes arquivos na raiz do repositório.
+2. Em `Settings > Pages`, mantenha `main` e `/(root)`.
+3. Aguarde 1 minuto.

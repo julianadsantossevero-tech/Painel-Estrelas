@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Radar Estrelas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Programa Estrelas · Projeto Brasil 60%</p>
+      <h1>Radar Estrelas</h1>
+      <p class="sub">Painel estático para GitHub Pages. Troque os dados no arquivo <strong>data.js</strong> e o site atualiza.</p>
+    </div>
+    <div class="hero-actions">
+      <button class="btn secondary" onclick="showView('dashboard')">Dashboard</button>
+      <button class="btn secondary" onclick="showView('quickwins')">Prontas para acelerar</button>
+      <button class="btn secondary" onclick="showView('franquias')">Franquias</button>
+      <button class="btn secondary" onclick="showView('distribuidores')">Distribuidores</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="dashboard-view" class="view active">
+      <div class="grid kpis">
+        <article class="card kpi">
+          <span class="label">% Brasil 2⭐+</span>
+          <strong id="kpi-atual">0%</strong>
+          <small>Meta 60%</small>
+        </article>
+        <article class="card kpi">
+          <span class="label">Gap para a meta</span>
+          <strong id="kpi-gap">0</strong>
+          <small>empreendedoras</small>
+        </article>
+        <article class="card kpi clickable" onclick="showView('quickwins')">
+          <span class="label">Prontas para acelerar</span>
+          <strong id="kpi-quickwins">0</strong>
+          <small>Clique para ver empreendedoras e distribuidores</small>
+        </article>
+        <article class="card kpi">
+          <span class="label">Base frágil</span>
+          <strong id="kpi-fragil">0</strong>
+          <small>Nenhum + 1⭐</small>
+        </article>
+      </div>
+
+      <div class="grid two">
+        <article class="card">
+          <div class="section-head">
+            <h2>Onde agir agora</h2>
+            <span class="tag">Leitura rápida</span>
+          </div>
+          <ul id="acoes-lista" class="action-list"></ul>
+        </article>
+
+        <article class="card">
+          <div class="section-head">
+            <h2>Top franquias prioritárias</h2>
+            <span class="tag">Gap para 60%</span>
+          </div>
+          <div id="franquias-resumo" class="bars"></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="quickwins-view" class="view">
+      <div class="section-page-head">
+        <div>
+          <p class="eyebrow">Tela operacional</p>
+          <h2>Prontas para acelerar</h2>
+          <p class="sub">Empreendedoras de maior potencial imediato para virar resultado.</p>
+        </div>
+        <button class="btn secondary" onclick="showView('dashboard')">Voltar ao painel</button>
+      </div>
+      <article class="card">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Empreendedora</th>
+                <th>Franquia</th>
+                <th>Distribuidor</th>
+                <th>Pontos</th>
+                <th>Faixa</th>
+                <th>Ação sugerida</th>
+              </tr>
+            </thead>
+            <tbody id="quickwins-table"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section id="franquias-view" class="view">
+      <div class="section-page-head">
+        <div>
+          <p class="eyebrow">Tela estratégica</p>
+          <h2>Franquias prioritárias</h2>
+          <p class="sub">Ranking das operações que puxam ou travam o Brasil.</p>
+        </div>
+        <button class="btn secondary" onclick="showView('dashboard')">Voltar ao painel</button>
+      </div>
+      <article class="card">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Franquia</th>
+                <th>Base</th>
+                <th>2⭐+</th>
+                <th>% Atual</th>
+                <th>Gap</th>
+                <th>Status</th>
+                <th>700+</th>
+                <th>500-699</th>
+              </tr>
+            </thead>
+            <tbody id="franquias-table"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section id="distribuidores-view" class="view">
+      <div class="section-page-head">
+        <div>
+          <p class="eyebrow">Tela de execução</p>
+          <h2>Distribuidores foco</h2>
+          <p class="sub">Carteiras com maior concentração de base frágil e quick wins.</p>
+        </div>
+        <button class="btn secondary" onclick="showView('dashboard')">Voltar ao painel</button>
+      </div>
+      <article class="card">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Distribuidor</th>
+                <th>Franquia</th>
+                <th>Carteira</th>
+                <th>Base frágil</th>
+                <th>700+</th>
+                <th>Ação</th>
+              </tr>
+            </thead>
+            <tbody id="distribuidores-table"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
