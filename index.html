@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel estratégico - Radar 60%</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="top-header">
+      <div class="brand">
+        <img src="logo.png" alt="Estrelas Romance" class="logo" />
+      </div>
+      <div class="header-right">
+        <h1>Painel estratégico - Radar 60%</h1>
+        <nav class="menu">
+          <button>Dashboard</button>
+          <button>Franquias</button>
+          <button>Distribuidor independente</button>
+          <button>Empreendedoras</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pink-area">
+      <section class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-label">% Tropa de Elite</div>
+          <div class="kpi-value-row">
+            <div class="kpi-value" id="elite">40,3%</div>
+            <div class="arrow-down">↓</div>
+          </div>
+          <div class="kpi-sub">Meta: 60%</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-label">GAP para a meta:</div>
+          <div class="kpi-value" id="gap">23.218</div>
+          <div class="kpi-sub">Empreendedoras</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-label">Empreendedoras para virada:</div>
+          <div class="kpi-value" id="quick">12.175</div>
+          <div class="kpi-sub">Acima de 700 pontos</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-label">Base frágil</div>
+          <div class="kpi-value" id="fragil">65.148</div>
+          <div class="kpi-sub">Sem categoria e 1 Estrela abaixo dos 700 pontos</div>
+        </div>
+      </section>
+
+      <section class="bottom-grid">
+        <div class="panel-card">
+          <h2>Dicas para agir:</h2>
+          <ul id="acoes"></ul>
+        </div>
+
+        <div class="panel-card">
+          <h2>TOP Distribuidores Independentes:</h2>
+          <div id="dist-list" class="dist-list"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
